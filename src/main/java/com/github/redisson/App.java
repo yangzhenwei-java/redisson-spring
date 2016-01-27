@@ -1,4 +1,4 @@
-package com.github.redisson_spring;
+package com.github.redisson;
 
 /**
  * Hello world!
