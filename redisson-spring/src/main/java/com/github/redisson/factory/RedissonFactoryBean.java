@@ -5,11 +5,11 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.FactoryBean;
 
 import com.github.redisson.RedissonTemplate;
-import com.github.redisson.config.RedissonConfig;
+import com.github.redisson.config.RedissonPoolConfig;
 
 public class RedissonFactoryBean implements DisposableBean, FactoryBean<RedissonTemplate> {
 
-	RedissonConfig config;
+	RedissonPoolConfig config;
 
 	private Redisson redisson;
 	
@@ -37,11 +37,11 @@ public class RedissonFactoryBean implements DisposableBean, FactoryBean<Redisson
 		return true;
 	}
 
-	public RedissonConfig getConfig() {
+	public RedissonPoolConfig getConfig() {
 		return config;
 	}
 
-	public void setConfig(RedissonConfig config) {
+	public void setConfig(RedissonPoolConfig config) {
 		this.config = config;
 	}
 
